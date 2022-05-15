@@ -1,0 +1,31 @@
+<table border="1" cellpadding="7" cellspacing="7">
+<tr>
+<th>ID</th>
+<th>USERNAME</th>
+<th>PASSWORD</th>
+<th>DELETE</th>
+<th>EDIT</th>
+</tr>
+
+<%if(data.length)
+{
+for(var i=0;i<data.length;i++)
+{ %>
+
+<tr>
+<td><%=(i+1)%></td>
+<td><%=data[i].username%></td>
+<td><%=data[i].password%></td>
+<td><a href="/delete/<%=data[i].id%>">Delete</a></td>
+<td><a href="/edit/<%=data[i].id%>">Edit</a></td>
+</tr>
+<%}
+
+}
+else {%>
+<tr>
+<td colspan="3"> no user found </td>
+</tr>
+<%}%>
+</table>
+

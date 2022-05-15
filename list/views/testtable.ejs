@@ -1,0 +1,39 @@
+<table boredr="1" cellpadding="7" cellspacing="7">
+<tr>
+    <th>No</th>
+	<th>Username</th>
+	<th>Delete</th>
+	<th>Edit</th>
+</tr>
+
+<%if(data.length){
+    for(var i=0; i<data.length; i++){%>
+	<tr>
+	    <td><%=(i+1)%></td>
+		<td><%=data[i].name%></td>
+		<td><%=data[i].address%></td>
+		<td><a href="/delete/<%=data[i].empno%>">Delete</a></td>
+		<td><a href="/Edit/<%=data[i].empno%>">Edit</a></td>
+	</tr>
+	<%}
+	
+	}else{%>
+	
+	<tr>
+	    <td colspan="3">NO user found</td>
+	</tr>
+	
+	<%}%>
+	</table>
+	
+	
+	<input type="text" id="userVal" onkeyup=show(this.value) placeholder="Search by name">
+	
+	<script>
+	function show (val){
+	//console.log(window.location.origin+'/custSearch?userval='+val);
+	location.href='http://localhost:4300/custSearch?userVal='+val;
+	}
+	</script>
+	
+	

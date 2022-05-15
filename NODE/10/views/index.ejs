@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html><head>
+		<link href="css/bootstrap.min.css"  rel="stylesheet"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/bootstrap.bundle.min.js"></script>
+		<script src="js/angular.min.js"></script>
+</head>
+<body ng-app="ngApp" ng-controller="ngCtrl">
+<div class="container">
+<form method = "post" name="studentForm">
+<div class="row">
+<div class="col-sm-4 offset-sm-4">
+<div class="form-group">
+<br/>
+
+			
+<h4 class="text-center">CHOOSE A STUDENT</h4>
+
+<select class="studentName form-control" ng-model = "studentName" ng-change = "studentClass()">
+<option value=""> SELECT A STUDENT </option>
+
+<% if( data.length )
+{ 
+for( var i = 0 ; i < data.length; i++ ){ %>
+<option value="<%= data[i].roll_number %>"> <%= data[i].name %></option>
+<%	}
+} %>
+</select></div>
+					
+<div class="form-group" ng-show="hasClassData">
+<h4 class="text-center">CHOOSE A CLASS</h4>
+<select class="StudentClass form-control"
+ ng-model = "studentClass" ng-change = "studentSubjects()">
+<option ng-repeat="class in classData" 
+value="{{class.class_name}}">{{class.class_name}}</option>
+</select></div>
+
+<div ng-show="hasSubjectData" >
+<div class="form-group">
+<h4 class="text-center">CHOOSE A SUBJECT</h4>
+<select class="StudentSubject form-control" 
+ng-model = "studentSubjectname" ng-required="true">
+<option ng-repeat="subject in subjectData" value="{{subject.subject}}">{{subject.subject}}</option>
+</select>
+</div>
+	
+<div class="form-group">
+<label>Marks: </label>
+<input type="text" name="marks" 
+ng-model="marks" ng-required="true" class="form-control">
+<span ng-show="studentForm.marks.$touched && studentForm.marks.$error.required" class="text-danger">
+* This field is required</span>							
+</div>
+						
+<div class="form-group">
+<button type="button" ng-disabled="studentForm.$invalid" ng-click="saveStudentMarks()" class="btn btn-sm-success btn-success" >Save</button>
+</div></div></div></div>
+</form></div></body>
+	
+<script>
+var app = angular.module('ngApp',[]);
+app.controller('ngCtrl', function($scope, $http){
+
+$scope.hasClassData = false;
+$scope.hasSubjectData = false;
+$scope.classData = '';
+$scope.studentClass = function()
+{
+var roll_number = $scope.studentName;
+$scope.url = "http://localhost:4300/getClass";
+
+$http.post($scope.url,{'roll_number': roll_number})
+.then(function (response)
+ {
+$scope.classData = response.data;
+$scope.hasClassData = true;
+});
+}
+
+$scope.studentSubjects = function(){
+$scope.url = "http://localhost:4300/getSubjects";
+
+var class_name = $scope.studentClass;
+$http.post($scope.url,{'class_name' : class_name})
+.then(function( response )
+{
+$scope.subjectData = response.data;
+$scope.hasSubjectData = true;
+}) 
+			
+}
+$scope.saveStudentMarks = function()
+{
+var roll_number = $scope.studentName;
+var studentClass = $scope.studentClass;
+var studentSubjectname = $scope.studentSubjectname;
+var marks = $scope.marks;
+$scope.url = "http://localhost:4300/saveStudent";
+
+var class_name = $scope.studentClass;
+$http.post($scope.url,
+{'roll_number' : roll_number, 'studentClass': studentClass, 'studentSubjectname': studentSubjectname, 'marks': marks })
+.then(function( response )
+{				
+}) 
+}
+});
+</script></html>

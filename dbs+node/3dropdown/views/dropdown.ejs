@@ -1,0 +1,40 @@
+<form action="/sel" method="post">
+
+<select name="type">
+<optgroup label="Type">
+<% if(data.length){
+	for(i=0;i<data.length;i++){%>
+	<option><%=data[i].type%></option>
+	<%}
+}%>
+
+</optgroup>
+</select>
+<select name="location">
+<optgroup label="location">
+<% if(data.length){
+	for(i=0;i<data.length;i++){%>
+	<option><%=data[i].location%></option>
+	<%}
+}%>
+
+</optgroup>
+</select>
+<select name="person">
+<optgroup label="person">
+<% if(data.length){
+	for(i=0;i<data.length;i++){%>
+	<option><%=data[i].person%></option>
+
+
+	<%}
+}%>
+</optgroup>
+</select>
+<%if(data){%>
+<a href="/del/<%data.type%>">delete</a>
+<%}%>
+<input type="submit">
+
+
+</form>

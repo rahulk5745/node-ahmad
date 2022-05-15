@@ -1,0 +1,22 @@
+<form action="/submit11">
+<input type="submit" value="update">
+<select   name=kk11>
+	<%if(data.length){
+		for(var i=0;i<data.length;i++){ %>
+		
+			
+			<option><%=data[i].id%></option>
+		
+	<% }
+	}else{ %>
+	<p>NO User FOund</p>
+	
+	<% } %>
+
+<script>
+function show(val){
+//console.log(window.location.origin+'/custSearch?userVal='+val);
+	location.href = 'http://localhost:4300/custSearch?userVal='+val;
+}
+</script>
+</form>

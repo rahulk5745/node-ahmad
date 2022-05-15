@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="formexample">
+<head>
+<script src="js/angular.js"></script>
+<script src="js/formjs.js"></script>
+</head>
+<body>
+<div ng-controller="getvalue">
+<select ng-model="selectedId" ng-change="onuserchange()" ng-init="displaydata()" ng-options="x.name for x in usermain">
+</select>
+<table ng-show="dropdata" style="margin:10px;" border="1px">
+<tr>
+<td>sno</td>
+<td>name</td>
+<td>email</td>
+<td>message</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>{{dropdata.name}}</td>
+<td>{{dropdata.email}}</td>
+<td>{{dropdata.message}}</td></tr>
+</table></div></body></html>

@@ -1,0 +1,86 @@
+*{margin:0px; padding:0px;}
+
+img{border:none;}
+
+a{outline:none; text-decoration:none;}
+
+.flt{float:left;}
+
+.flr{float:right;}
+
+.clr{clear:both;}
+
+body{font-family:"Century Gothic"; font-size:12px; color:#000;}
+.wrapper{width:1023px; margin:0px auto;}
+
+#headerbg{background:url(../images/header-bg-new.jpg) repeat-x; height:130px; width:100%; float:left;}
+.logo{margin:35px 67px 0px 41px; width:145px;}
+
+
+.top-nav{margin:5px 0px 0px 450px; float:left;}
+.top-nav ul li{list-style:none;display: inline;}
+.top-nav ul li a{color:#FFFFFF;text-decoration:none;margin-left: 12px;}
+
+
+.nav{margin:61px 0px 0px 0px; float:left;}
+.home-new{ background:url(../images/menu-bg.png) no-repeat; width:126px; height:46px; float:left; margin-right:2px;font-size: 20px;color: #FFFFFF;text-align: center;padding-top: 10px;}
+
+.home{ background:url(../images/home-new.png) no-repeat; width:148px; height:46px; float:left; margin-right:2px;}
+.products{background:url(../images/product-new.png) no-repeat; width:111px; height:46px; float:left; margin-right:8px;}
+.about{background:url(../images/aboutus-new.png) no-repeat; height:46px; float:left; width:111px; margin-right:9px;}
+.contact{background:url(../images/contactus-new.png) no-repeat; width:131px; height:46px; float:left; margin-right:4px;}
+.coupan{background:url(../images/copans-new.png) no-repeat; width:108px; height:46px; float:left; margin-right:3px;}
+.Newsletter{background:url(../images/nwes-new.png) no-repeat; width:123px; height:46px; float:left;}
+
+a.home.active{background:url(../images/menu-bg.png) no-repeat left -47px;}
+a.home-new.active{background:url(../images/menu-bg.png) no-repeat left -47px;}
+
+.home-new:hover{ background:url(../images/menu-bg.png) no-repeat left -47px;}
+.home:hover{ background:url(../images/home-new.png) no-repeat left -47px;}
+.products:hover{background:url(../images/product-new.png) no-repeat left -47px;}
+.about:hover{background:url(../images/aboutus-new.png) no-repeat left -47px; }
+.contact:hover{background:url(../images/contactus-new.png) no-repeat left -47px;}
+.coupan:hover{background:url(../images/copans-new.png) no-repeat left -47px;}
+.Newsletter:hover{background:url(../images/nwes-new.png) no-repeat left -47px;}
+
+.round{width:283px; margin:30px 0px 0px 376px;}
+.round ul{list-style:none;  }
+.round ul li{padding:0px 12px 0px 12px; float:left;}
+
+.leftsec{width:643px; margin:41px 0px 0px 20px;}
+.leftsec h4{font-family:verdana; font-weight:normal; font-size:30px; color:#000; padding:0px 0px 20px 45px;}
+.slider{position:absolute;}
+.leftarrow{position:absolute; margin:118px 0px 0px -3px;}
+.rightarrow {position:absolute; float:right; margin:118px 0px 0px 605px;}
+
+.rightsec{width:260px; margin:48px 0px 0px 0px;}
+.rightsec h3{font-size:20px; font-weight:bold; font-family:"Century Gothic"; color:#000; padding:0px 0px 0px 48px;}
+.events{margin:22px 0px 2px 0px;}
+.events img{padding:8px 10px 17px 0px; float:left;}
+.events p{ text-align:justify;}
+.events p span{font-weight:bold; color:#000;}
+.readmore{margin:16px 60px 0px 0px;}
+
+
+.box{width:262px; margin:82px 54px 0px 25px; float:left;}
+.box h4{font-size:18px; font-family:verdana; color:#000;}
+.box  img{padding:24px 0px 14px 0px;}
+.box  p{text-align:justify;}
+.readmore2{margin:-10px 0px 0px 0px;}
+
+.footerbg{background:url(../images/footer-bg-new.jpg) repeat-x; width:100%; height:366px; float:left; margin-top:58px;}
+
+.footerleft{width:300px; margin:29px 20px 0px 15px;}
+.footerleft h2{color:#fff; font-size:20px;}
+.footerleft  p, .footermid p, .footerright p{text-align:justify; color:#fff; padding:14px 0px 0px 0px;}
+
+.footermid{width:300px; margin:29px 20px 0px 65px;}
+.footermid h2{color:#fff; font-size:20px;}
+
+
+.footerright{width:190px; margin:29px 20px 0px 45px;}
+.media{margin:0px 0px 0px 82px;}
+.footerright p{text-align:justify; color:#fff; padding:14px 0px 0px 40px; }
+
+.copyright{background:#1e1e1e; height:56px; width:100%; float:left; margin-top:26px;}
+.copyright p{text-align:center; line-height:56px; font-size:14px; color:#fff;}

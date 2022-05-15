@@ -1,0 +1,18 @@
+{
+  "name": "aaa",
+  "version": "1.1.1",
+  "description": "aaa",
+  "main": "aa",
+  "scripts": {
+    "test": "aa"
+  },
+  "repository": {
+    "type": "git",
+    "url": "aa"
+  },
+  "keywords": [
+    "aa"
+  ],
+  "author": "aa",
+  "license": "(ISC)"
+}

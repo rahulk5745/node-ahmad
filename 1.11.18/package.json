@@ -1,0 +1,18 @@
+{
+  "name": "1.1.1",
+  "version": "1.1.1",
+  "description": "ee",
+  "main": "ee",
+  "scripts": {
+    "test": "ee"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ee"
+  },
+  "keywords": [
+    "ee"
+  ],
+  "author": "ee",
+  "license": "ISC"
+}

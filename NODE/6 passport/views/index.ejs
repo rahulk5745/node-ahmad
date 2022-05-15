@@ -1,0 +1,14 @@
+<html ng-app="myapp">
+<head> 
+<title> homepage </title>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+<script src="js/script.js"></script></head>
+
+<body ng-controller="myctrl">
+<div>
+<input type="button" value="login" ng-click="login_btn()">
+<a href="/loginform"> clickme </a></div>
+</body>
+<div ng-view></div>
+</html>
